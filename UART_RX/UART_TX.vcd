@@ -1,0 +1,1348 @@
+$date
+	Mon Aug 15 13:01:19 2022
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	100ps
+$end
+
+$scope module UART_RX_tb $end
+$var parameter 32 ! CLOCK_PERIOD $end
+$var reg 1 " RX_IN_tb $end
+$var reg 7 # prescale_tb [6:0] $end
+$var reg 1 $ PAR_EN_tb $end
+$var reg 1 % PAR_TYP_tb $end
+$var reg 1 & CLK_tb $end
+$var reg 1 ' RST_tb $end
+$var wire 1 ( P_data_tb [7] $end
+$var wire 1 ) P_data_tb [6] $end
+$var wire 1 * P_data_tb [5] $end
+$var wire 1 + P_data_tb [4] $end
+$var wire 1 , P_data_tb [3] $end
+$var wire 1 - P_data_tb [2] $end
+$var wire 1 . P_data_tb [1] $end
+$var wire 1 / P_data_tb [0] $end
+$var wire 1 0 data_valid_tb $end
+
+$scope task initialize $end
+$upscope $end
+
+$scope task reset $end
+$upscope $end
+
+$scope task Test_with_even_parity $end
+$var integer 32 1 I $end
+$upscope $end
+
+$scope module DUT $end
+$var parameter 32 2 WIDTH $end
+$var parameter 32 3 PRESCALE_WIDTH $end
+$var wire 1 4 RX_IN $end
+$var wire 1 5 prescale [5] $end
+$var wire 1 6 prescale [4] $end
+$var wire 1 7 prescale [3] $end
+$var wire 1 8 prescale [2] $end
+$var wire 1 9 prescale [1] $end
+$var wire 1 : prescale [0] $end
+$var wire 1 ; PAR_EN $end
+$var wire 1 < PAR_TYP $end
+$var wire 1 = CLK $end
+$var wire 1 > RST $end
+$var wire 1 ( P_data [7] $end
+$var wire 1 ) P_data [6] $end
+$var wire 1 * P_data [5] $end
+$var wire 1 + P_data [4] $end
+$var wire 1 , P_data [3] $end
+$var wire 1 - P_data [2] $end
+$var wire 1 . P_data [1] $end
+$var wire 1 / P_data [0] $end
+$var wire 1 0 data_valid $end
+$var wire 1 ? edge_cnt [4] $end
+$var wire 1 @ edge_cnt [3] $end
+$var wire 1 A edge_cnt [2] $end
+$var wire 1 B edge_cnt [1] $end
+$var wire 1 C edge_cnt [0] $end
+$var wire 1 D bit_cnt [3] $end
+$var wire 1 E bit_cnt [2] $end
+$var wire 1 F bit_cnt [1] $end
+$var wire 1 G bit_cnt [0] $end
+$var wire 1 H data_sample_en $end
+$var wire 1 I par_chk_en $end
+$var wire 1 J par_err $end
+$var wire 1 K strt_chk_en $end
+$var wire 1 L strt_glitch $end
+$var wire 1 M stp_chk_en $end
+$var wire 1 N stp_err $end
+$var wire 1 O deser_en $end
+$var wire 1 P sampled_bit $end
+$var wire 1 Q enable $end
+
+$scope module Rx_FSM_module $end
+$var parameter 32 R PRESCALE_WIDTH $end
+$var parameter 3 S IDLE_STATE $end
+$var parameter 3 T START_STATE $end
+$var parameter 3 U DATA_STATE $end
+$var parameter 3 V PARITY_STATE $end
+$var parameter 3 W STOP_STATE $end
+$var parameter 3 X OUTPUT_STATE $end
+$var wire 1 D bit_cnt [3] $end
+$var wire 1 E bit_cnt [2] $end
+$var wire 1 F bit_cnt [1] $end
+$var wire 1 G bit_cnt [0] $end
+$var wire 1 ? edge_cnt [4] $end
+$var wire 1 @ edge_cnt [3] $end
+$var wire 1 A edge_cnt [2] $end
+$var wire 1 B edge_cnt [1] $end
+$var wire 1 C edge_cnt [0] $end
+$var wire 1 ; PAR_EN $end
+$var wire 1 J par_err $end
+$var wire 1 L strt_glitch $end
+$var wire 1 N stp_err $end
+$var wire 1 4 RX_IN $end
+$var wire 1 > RST $end
+$var wire 1 = CLK $end
+$var wire 1 5 prescale [5] $end
+$var wire 1 6 prescale [4] $end
+$var wire 1 7 prescale [3] $end
+$var wire 1 8 prescale [2] $end
+$var wire 1 9 prescale [1] $end
+$var wire 1 : prescale [0] $end
+$var reg 1 Y data_sample_en $end
+$var reg 1 Z enable $end
+$var reg 1 [ par_chk_en $end
+$var reg 1 \ strt_chk_en $end
+$var reg 1 ] stp_chk_en $end
+$var reg 1 ^ deser_en $end
+$var reg 1 _ data_valid $end
+$var reg 1 ` parity_error $end
+$var reg 1 a stop_error $end
+$var reg 5 b first_bit [4:0] $end
+$var reg 5 c second_bit [4:0] $end
+$var reg 5 d third_bit [4:0] $end
+$var reg 5 e max_count [4:0] $end
+$var reg 3 f next_state [2:0] $end
+$var reg 3 g current_state [2:0] $end
+$upscope $end
+
+$scope module data_sampling_module $end
+$var parameter 32 h PRESCALE_WIDTH $end
+$var wire 1 H data_sample_en $end
+$var wire 1 4 RX_IN $end
+$var wire 1 ? edge_cnt [4] $end
+$var wire 1 @ edge_cnt [3] $end
+$var wire 1 A edge_cnt [2] $end
+$var wire 1 B edge_cnt [1] $end
+$var wire 1 C edge_cnt [0] $end
+$var wire 1 5 prescale [5] $end
+$var wire 1 6 prescale [4] $end
+$var wire 1 7 prescale [3] $end
+$var wire 1 8 prescale [2] $end
+$var wire 1 9 prescale [1] $end
+$var wire 1 : prescale [0] $end
+$var wire 1 = CLK $end
+$var wire 1 > RST $end
+$var reg 1 i sampled_bit $end
+$var reg 1 j A $end
+$var reg 1 k B $end
+$var reg 1 l C $end
+$upscope $end
+
+$scope module edge_bit_counter_module $end
+$var parameter 32 m PRESCALE_WIDTH $end
+$var wire 1 Q enable $end
+$var wire 1 = CLK $end
+$var wire 1 > RST $end
+$var wire 1 5 prescale [5] $end
+$var wire 1 6 prescale [4] $end
+$var wire 1 7 prescale [3] $end
+$var wire 1 8 prescale [2] $end
+$var wire 1 9 prescale [1] $end
+$var wire 1 : prescale [0] $end
+$var reg 5 n edge_cnt [4:0] $end
+$var reg 4 o bit_cnt [3:0] $end
+$upscope $end
+
+$scope module deserializer_module $end
+$var parameter 32 p WIDTH $end
+$var parameter 32 q PRESCALE_WIDTH $end
+$var wire 1 P sampled_bit $end
+$var wire 1 D bit_cnt [3] $end
+$var wire 1 E bit_cnt [2] $end
+$var wire 1 F bit_cnt [1] $end
+$var wire 1 G bit_cnt [0] $end
+$var wire 1 ? edge_cnt [4] $end
+$var wire 1 @ edge_cnt [3] $end
+$var wire 1 A edge_cnt [2] $end
+$var wire 1 B edge_cnt [1] $end
+$var wire 1 C edge_cnt [0] $end
+$var wire 1 5 prescale [5] $end
+$var wire 1 6 prescale [4] $end
+$var wire 1 7 prescale [3] $end
+$var wire 1 8 prescale [2] $end
+$var wire 1 9 prescale [1] $end
+$var wire 1 : prescale [0] $end
+$var wire 1 = CLK $end
+$var wire 1 > RST $end
+$var wire 1 O deser_en $end
+$var reg 8 r P_data [7:0] $end
+$upscope $end
+
+$scope module parity_check_module $end
+$var parameter 32 s WIDTH $end
+$var parameter 32 t PRESCALE_WIDTH $end
+$var wire 1 < PAR_TYP $end
+$var wire 1 ( P_data [7] $end
+$var wire 1 ) P_data [6] $end
+$var wire 1 * P_data [5] $end
+$var wire 1 + P_data [4] $end
+$var wire 1 , P_data [3] $end
+$var wire 1 - P_data [2] $end
+$var wire 1 . P_data [1] $end
+$var wire 1 / P_data [0] $end
+$var wire 1 I par_chk_en $end
+$var wire 1 P sampled_bit $end
+$var wire 1 ? edge_cnt [4] $end
+$var wire 1 @ edge_cnt [3] $end
+$var wire 1 A edge_cnt [2] $end
+$var wire 1 B edge_cnt [1] $end
+$var wire 1 C edge_cnt [0] $end
+$var wire 1 5 prescale [5] $end
+$var wire 1 6 prescale [4] $end
+$var wire 1 7 prescale [3] $end
+$var wire 1 8 prescale [2] $end
+$var wire 1 9 prescale [1] $end
+$var wire 1 : prescale [0] $end
+$var wire 1 = CLK $end
+$var wire 1 > RST $end
+$var reg 1 u par_err $end
+$var reg 5 v sampling_time [4:0] $end
+$var reg 1 w Par_bit $end
+$upscope $end
+
+$scope module stop_check_module $end
+$var parameter 32 x PRESCALE_WIDTH $end
+$var wire 1 M stp_chk_en $end
+$var wire 1 P sampled_bit $end
+$var wire 1 ? edge_cnt [4] $end
+$var wire 1 @ edge_cnt [3] $end
+$var wire 1 A edge_cnt [2] $end
+$var wire 1 B edge_cnt [1] $end
+$var wire 1 C edge_cnt [0] $end
+$var wire 1 5 prescale [5] $end
+$var wire 1 6 prescale [4] $end
+$var wire 1 7 prescale [3] $end
+$var wire 1 8 prescale [2] $end
+$var wire 1 9 prescale [1] $end
+$var wire 1 : prescale [0] $end
+$var wire 1 = CLK $end
+$var wire 1 > RST $end
+$var reg 1 y stp_err $end
+$var reg 5 z sampling_time [4:0] $end
+$upscope $end
+
+$scope module start_check_module $end
+$var parameter 32 { PRESCALE_WIDTH $end
+$var wire 1 K strt_chk_en $end
+$var wire 1 P sampled_bit $end
+$var wire 1 ? edge_cnt [4] $end
+$var wire 1 @ edge_cnt [3] $end
+$var wire 1 A edge_cnt [2] $end
+$var wire 1 B edge_cnt [1] $end
+$var wire 1 C edge_cnt [0] $end
+$var wire 1 5 prescale [5] $end
+$var wire 1 6 prescale [4] $end
+$var wire 1 7 prescale [3] $end
+$var wire 1 8 prescale [2] $end
+$var wire 1 9 prescale [1] $end
+$var wire 1 : prescale [0] $end
+$var wire 1 = CLK $end
+$var wire 1 > RST $end
+$var reg 1 | strt_glitch $end
+$var reg 5 } sampling_time [4:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+b1000 #
+1$
+0%
+1&
+1'
+xY
+xZ
+x[
+x\
+x]
+x^
+x_
+x`
+xa
+b11 b
+b100 c
+b101 d
+b111 e
+bx f
+bx g
+xi
+xj
+xk
+xl
+b0 n
+b0 o
+bx r
+0u
+b110 v
+xw
+0y
+b110 z
+0|
+b110 }
+b10100 !
+b1000 2
+b110 3
+b110 R
+b0 S
+b1 T
+b10 U
+b11 V
+b100 W
+b101 X
+b110 h
+b110 m
+b1000 p
+b110 q
+b1000 s
+b110 t
+b110 x
+b110 {
+bx 1
+x/
+x.
+x-
+x,
+x+
+x*
+x)
+x(
+x0
+0C
+0B
+0A
+0@
+0?
+0G
+0F
+0E
+0D
+xH
+xI
+0J
+xK
+0L
+xM
+0N
+xO
+xP
+xQ
+1>
+1=
+0<
+1;
+0:
+09
+08
+17
+06
+05
+14
+$end
+#50
+0'
+0>
+b0 g
+0j
+0k
+0l
+b0 r
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0i
+0Z
+0Y
+0\
+0[
+0]
+0^
+0_
+b0 f
+0P
+0Q
+0H
+0K
+0M
+0O
+00
+0I
+#100
+0&
+0=
+#110
+1'
+1>
+#200
+1&
+1=
+#300
+0&
+0=
+#310
+0"
+04
+b1 f
+#400
+1&
+1=
+b1 g
+1Z
+1Y
+1\
+1Q
+1H
+1K
+#500
+0&
+0=
+#600
+1&
+1=
+b1 n
+1C
+#700
+0&
+0=
+#800
+1&
+1=
+b10 n
+0C
+1B
+#900
+0&
+0=
+#1000
+1&
+1=
+b11 n
+1C
+#1100
+0&
+0=
+#1200
+1&
+1=
+b100 n
+0C
+0B
+1A
+#1300
+0&
+0=
+#1400
+1&
+1=
+b101 n
+1C
+#1500
+0&
+0=
+#1600
+1&
+1=
+b110 n
+0C
+1B
+#1700
+0&
+0=
+#1800
+1&
+1=
+b111 n
+1C
+b10 f
+#1900
+0&
+0=
+#1910
+1"
+14
+#2000
+1&
+1=
+b10 g
+b0 n
+b1 o
+1G
+0C
+0B
+0A
+0\
+1^
+0K
+1O
+#2100
+0&
+0=
+#2110
+b0 1
+#2200
+1&
+1=
+b1 n
+1C
+#2300
+0&
+0=
+#2400
+1&
+1=
+b10 n
+0C
+1B
+#2500
+0&
+0=
+#2600
+1&
+1=
+b11 n
+1C
+#2700
+0&
+0=
+#2800
+1&
+1=
+1j
+b100 n
+0C
+0B
+1A
+#2900
+0&
+0=
+#3000
+1&
+1=
+1k
+b101 n
+1C
+1i
+1P
+#3100
+0&
+0=
+#3200
+1&
+1=
+1l
+b110 n
+0C
+1B
+#3300
+0&
+0=
+#3400
+1&
+1=
+b111 n
+1C
+#3500
+0&
+0=
+#3600
+1&
+1=
+b0 n
+b10 o
+b1 r
+1/
+0G
+1F
+0C
+0B
+0A
+#3700
+0&
+0=
+#3710
+b1 1
+#3800
+1&
+1=
+b1 n
+1C
+#3900
+0&
+0=
+#4000
+1&
+1=
+b10 n
+0C
+1B
+#4100
+0&
+0=
+#4200
+1&
+1=
+b11 n
+1C
+#4300
+0&
+0=
+#4400
+1&
+1=
+b100 n
+0C
+0B
+1A
+#4500
+0&
+0=
+#4600
+1&
+1=
+b101 n
+1C
+#4700
+0&
+0=
+#4800
+1&
+1=
+b110 n
+0C
+1B
+#4900
+0&
+0=
+#5000
+1&
+1=
+b111 n
+1C
+#5100
+0&
+0=
+#5200
+1&
+1=
+b0 n
+b11 o
+b11 r
+1.
+1G
+0C
+0B
+0A
+#5300
+0&
+0=
+#5310
+b10 1
+#5400
+1&
+1=
+b1 n
+1C
+#5500
+0&
+0=
+#5600
+1&
+1=
+b10 n
+0C
+1B
+#5700
+0&
+0=
+#5800
+1&
+1=
+b11 n
+1C
+#5900
+0&
+0=
+#6000
+1&
+1=
+b100 n
+0C
+0B
+1A
+#6100
+0&
+0=
+#6200
+1&
+1=
+b101 n
+1C
+#6300
+0&
+0=
+#6400
+1&
+1=
+b110 n
+0C
+1B
+#6500
+0&
+0=
+#6600
+1&
+1=
+b111 n
+1C
+#6700
+0&
+0=
+#6800
+1&
+1=
+b0 n
+b100 o
+b111 r
+1-
+0G
+0F
+1E
+0C
+0B
+0A
+#6900
+0&
+0=
+#6910
+b11 1
+#7000
+1&
+1=
+b1 n
+1C
+#7100
+0&
+0=
+#7200
+1&
+1=
+b10 n
+0C
+1B
+#7300
+0&
+0=
+#7400
+1&
+1=
+b11 n
+1C
+#7500
+0&
+0=
+#7600
+1&
+1=
+b100 n
+0C
+0B
+1A
+#7700
+0&
+0=
+#7800
+1&
+1=
+b101 n
+1C
+#7900
+0&
+0=
+#8000
+1&
+1=
+b110 n
+0C
+1B
+#8100
+0&
+0=
+#8200
+1&
+1=
+b111 n
+1C
+#8300
+0&
+0=
+#8400
+1&
+1=
+b0 n
+b101 o
+b1111 r
+1,
+1G
+0C
+0B
+0A
+#8500
+0&
+0=
+#8510
+b100 1
+#8600
+1&
+1=
+b1 n
+1C
+#8700
+0&
+0=
+#8800
+1&
+1=
+b10 n
+0C
+1B
+#8900
+0&
+0=
+#9000
+1&
+1=
+b11 n
+1C
+#9100
+0&
+0=
+#9200
+1&
+1=
+b100 n
+0C
+0B
+1A
+#9300
+0&
+0=
+#9400
+1&
+1=
+b101 n
+1C
+#9500
+0&
+0=
+#9600
+1&
+1=
+b110 n
+0C
+1B
+#9700
+0&
+0=
+#9800
+1&
+1=
+b111 n
+1C
+#9900
+0&
+0=
+#10000
+1&
+1=
+b0 n
+b110 o
+b11111 r
+1+
+0G
+1F
+0C
+0B
+0A
+#10100
+0&
+0=
+#10110
+b101 1
+#10200
+1&
+1=
+b1 n
+1C
+#10300
+0&
+0=
+#10400
+1&
+1=
+b10 n
+0C
+1B
+#10500
+0&
+0=
+#10600
+1&
+1=
+b11 n
+1C
+#10700
+0&
+0=
+#10800
+1&
+1=
+b100 n
+0C
+0B
+1A
+#10900
+0&
+0=
+#11000
+1&
+1=
+b101 n
+1C
+#11100
+0&
+0=
+#11200
+1&
+1=
+b110 n
+0C
+1B
+#11300
+0&
+0=
+#11400
+1&
+1=
+b111 n
+1C
+#11500
+0&
+0=
+#11600
+1&
+1=
+b0 n
+b111 o
+b111111 r
+1*
+1G
+0C
+0B
+0A
+#11700
+0&
+0=
+#11710
+b110 1
+#11800
+1&
+1=
+b1 n
+1C
+#11900
+0&
+0=
+#12000
+1&
+1=
+b10 n
+0C
+1B
+#12100
+0&
+0=
+#12200
+1&
+1=
+b11 n
+1C
+#12300
+0&
+0=
+#12400
+1&
+1=
+b100 n
+0C
+0B
+1A
+#12500
+0&
+0=
+#12600
+1&
+1=
+b101 n
+1C
+#12700
+0&
+0=
+#12800
+1&
+1=
+b110 n
+0C
+1B
+#12900
+0&
+0=
+#13000
+1&
+1=
+b111 n
+1C
+#13100
+0&
+0=
+#13200
+1&
+1=
+b0 n
+b1000 o
+b1111111 r
+1)
+0G
+0F
+0E
+1D
+0C
+0B
+0A
+#13300
+0&
+0=
+#13310
+b111 1
+#13400
+1&
+1=
+b1 n
+1C
+#13500
+0&
+0=
+#13600
+1&
+1=
+b10 n
+0C
+1B
+#13700
+0&
+0=
+#13800
+1&
+1=
+b11 n
+1C
+#13900
+0&
+0=
+#14000
+1&
+1=
+b100 n
+0C
+0B
+1A
+#14100
+0&
+0=
+#14200
+1&
+1=
+b101 n
+1C
+#14300
+0&
+0=
+#14400
+1&
+1=
+b110 n
+0C
+1B
+#14500
+0&
+0=
+#14600
+1&
+1=
+b111 n
+1C
+b11 f
+#14700
+0&
+0=
+#14800
+1&
+1=
+b11 g
+b0 n
+b1001 o
+b11111111 r
+1(
+1G
+0C
+0B
+0A
+1[
+0^
+0`
+0O
+1I
+0w
+#14900
+0&
+0=
+#14910
+b1000 1
+0"
+04
+#15000
+1&
+1=
+b1 n
+1C
+#15100
+0&
+0=
+#15200
+1&
+1=
+b10 n
+0C
+1B
+#15300
+0&
+0=
+#15400
+1&
+1=
+b11 n
+1C
+#15500
+0&
+0=
+#15600
+1&
+1=
+0j
+b100 n
+0C
+0B
+1A
+#15700
+0&
+0=
+#15800
+1&
+1=
+0k
+b101 n
+1C
+0i
+0P
+#15900
+0&
+0=
+#16000
+1&
+1=
+0l
+b110 n
+0C
+1B
+#16100
+0&
+0=
+#16200
+1&
+1=
+b111 n
+1C
+b100 f
+#16300
+0&
+0=
+#16400
+1&
+1=
+b100 g
+b0 n
+b1010 o
+0G
+1F
+0C
+0B
+0A
+0[
+1]
+0a
+1M
+0I
+#16500
+0&
+0=
+#16510
+1"
+14
+#16600
+1&
+1=
+b1 n
+1C
+#16700
+0&
+0=
+#16800
+1&
+1=
+b10 n
+0C
+1B
+#16900
+0&
+0=
+#17000
+1&
+1=
+b11 n
+1C
+#17100
+0&
+0=
+#17200
+1&
+1=
+1j
+b100 n
+0C
+0B
+1A
+#17300
+0&
+0=
+#17400
+1&
+1=
+1k
+b101 n
+1C
+1i
+1P
+#17500
+0&
+0=
+#17600
+1&
+1=
+1l
+b110 n
+0C
+1B
+b101 f
+#17700
+0&
+0=
+#17800
+1&
+1=
+b101 g
+b111 n
+1C
+0Z
+0Y
+0]
+1_
+b0 f
+0Q
+0H
+0M
+10
+#17900
+0&
+0=
+#18000
+1&
+1=
+b0 g
+b0 n
+b0 o
+0F
+0D
+0C
+0B
+0A
+0_
+00
+#18100
+0&
+0=
+#18200
+1&
+1=
+#18300
+0&
+0=
+#18400
+1&
+1=
+#18500
+0&
+0=
+#18600
+1&
+1=
+#18700
+0&
+0=
+#18800
+1&
+1=
+#18900
+0&
+0=
+#19000
+1&
+1=
+#19100
+0&
+0=

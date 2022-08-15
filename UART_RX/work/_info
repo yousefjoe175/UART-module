@@ -1,0 +1,193 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Courses/Digital/Temsah Diploma/System/UART/Back Up/Digital-System-main/Rx_Code
+vdata_sampling
+Z1 !s110 1660561266
+!i10b 1
+!s100 AiDA_h@WHm[Cg4R<ADfMZ0
+IBHCRm`:MWfWOcQ]gJhdA@1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1660560369
+8data_sampling.v
+Fdata_sampling.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1660561266.000000
+Z5 !s107 UART_RX_tb.v|UART_RX.v|stop_check.v|start_check.v|Rx_FSM.v|parity_check.v|edge_bit_counter.v|deserializer.v|data_sampling.v|
+Z6 !s90 data_sampling.v|deserializer.v|edge_bit_counter.v|parity_check.v|Rx_FSM.v|start_check.v|stop_check.v|UART_RX.v|UART_RX_tb.v|
+!i113 1
+Z7 tCvgOpt 0
+vdeserializer
+R1
+!i10b 1
+!s100 c`DV5jBV_zX6G[>_znQ<B0
+I]=c3WmE_0K0N`2_Dj=;`Z1
+R2
+R0
+w1660561260
+8deserializer.v
+Fdeserializer.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vedge_bit_counter
+R1
+!i10b 1
+!s100 U>3N:mh@=ZWz;PLfE;^?Z0
+IZY;>ckk7dbnNe:e=HGd=c1
+R2
+R0
+w1660560382
+8edge_bit_counter.v
+Fedge_bit_counter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vparity_check
+R1
+!i10b 1
+!s100 _RSBV8hU^kXCYeVQZXU7h1
+I><39:o>7lD_De[df7T2De1
+R2
+R0
+w1660561089
+8parity_check.v
+Fparity_check.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vRx_FSM
+R1
+!i10b 1
+!s100 <=hF[4:FTE[?_8K7cY>gY1
+IoF3[P>ZWMhWnREi7zgI:h2
+R2
+R0
+w1660560359
+8Rx_FSM.v
+FRx_FSM.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+n@rx_@f@s@m
+vstart_check
+R1
+!i10b 1
+!s100 o;Yz2KdBMWK1MYkmc71e50
+I;:F110c13kBMDN0SeE_9a0
+R2
+R0
+w1660561190
+8start_check.v
+Fstart_check.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vstop_check
+R1
+!i10b 1
+!s100 GWmV;P]bglhaT9_^eWkhL1
+IaPOafLlD^bAnY`_A33gR^2
+R2
+R0
+w1660561217
+8stop_check.v
+Fstop_check.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vUART_RX
+R1
+!i10b 1
+!s100 EhiB?fi=O20Q;j=3hzDEC3
+I<TdPE3;V0E0XKUV;^dXO]0
+R2
+R0
+w1660561141
+8UART_RX.v
+FUART_RX.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+n@u@a@r@t_@r@x
+vUART_RX_tb
+R1
+!i10b 1
+!s100 e44<X]acAXYEDb5Rch]3^0
+IHjV85U:O8WzTZ8d_NMGOV3
+R2
+R0
+w1659047874
+8UART_RX_tb.v
+FUART_RX_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+n@u@a@r@t_@r@x_tb

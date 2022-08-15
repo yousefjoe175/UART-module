@@ -1,0 +1,55 @@
+# vsim work.UART_RX_tb 
+# Start time: 13:01:13 on Aug 15,2022
+# Loading work.UART_RX_tb
+# Loading work.UART_RX
+# Loading work.Rx_FSM
+# Loading work.data_sampling
+# Loading work.edge_bit_counter
+# Loading work.deserializer
+# Loading work.parity_check
+# Loading work.stop_check
+# Loading work.start_check
+# ** Warning: (vsim-3015) UART_RX_tb.v(150): [PCDPC] - Port size (6) does not match connection size (7) for port 'prescale'. The port definition is at: UART_RX.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /UART_RX_tb/DUT File: UART_RX.v
+add wave -position insertpoint  \
+sim:/UART_RX_tb/CLOCK_PERIOD \
+sim:/UART_RX_tb/RX_IN_tb \
+sim:/UART_RX_tb/prescale_tb \
+sim:/UART_RX_tb/PAR_EN_tb \
+sim:/UART_RX_tb/PAR_TYP_tb \
+sim:/UART_RX_tb/CLK_tb \
+sim:/UART_RX_tb/RST_tb \
+sim:/UART_RX_tb/P_data_tb \
+sim:/UART_RX_tb/data_valid_tb
+run -all
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<Testing the frame with EVEN parity>>>>>>>>>>>>>
+# start bit is received properly.
+# Checking on bit no.0...
+# Check is success
+# Checking on bit no.1...
+# Check is success
+# Checking on bit no.2...
+# Check is success
+# Checking on bit no.3...
+# Check is success
+# Checking on bit no.4...
+# Check is success
+# Checking on bit no.5...
+# Check is success
+# Checking on bit no.6...
+# Check is success
+# Checking on bit no.7...
+# Check is success
+# even parity bit is received correctly.
+# stop bit is received correctly.
+# data is valid at the output
+# data_valid is resetted after 1 clk
+# ** Note: $finish    : UART_RX_tb.v(41)
+#    Time: 1911 ns  Iteration: 0  Instance: /UART_RX_tb
+# 1
+# Break in Module UART_RX_tb at UART_RX_tb.v line 41
+# End time: 13:03:56 on Aug 15,2022, Elapsed time: 0:02:43
+# Errors: 0, Warnings: 1

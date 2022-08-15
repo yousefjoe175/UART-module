@@ -1,0 +1,155 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/EECE/DigitalElectronics/Diploma/System/Implementation/Code
+vFSM
+!s110 1657740885
+!i10b 1
+!s100 TZk2JMAKhFcUo>D3=Zz0c1
+IOQh]oJ4MX5W[OGeVMg6>E1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1657740421
+8FSM.v
+FFSM.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1657740885.000000
+!s107 UART_TX_tb.v|UART_TX.v|serializer.v|parity_calc.v|MUX.v|FSM.v|
+!s90 FSM.v|MUX.v|parity_calc.v|serializer.v|UART_TX.v|UART_TX_tb.v|
+!i113 1
+Z3 tCvgOpt 0
+n@f@s@m
+vMUX
+Z4 !s110 1660559080
+!i10b 1
+!s100 i[YbVD]n=dZoIRHleVLdI1
+IjYD:kWMGef7S=73SO=zeW3
+R1
+Z5 dE:/Courses/Digital/Temsah Diploma/System/UART/Back Up/Digital-System-main/Code
+Z6 w1659043576
+8MUX.v
+FMUX.v
+L0 1
+R2
+r1
+!s85 0
+31
+Z7 !s108 1660559080.000000
+Z8 !s107 UART_TX_tb.v|UART_TX.v|Tx_FSM.v|serializer.v|parity_calc.v|MUX.v|
+Z9 !s90 MUX.v|parity_calc.v|serializer.v|Tx_FSM.v|UART_TX.v|UART_TX_tb.v|
+!i113 1
+R3
+n@m@u@x
+vparity_calc
+R4
+!i10b 1
+!s100 iHa]PGX;1aAH]M?FlKoBG1
+Ia5^ea6h[J^SdSkS??gn<_3
+R1
+R5
+w1660558620
+8parity_calc.v
+Fparity_calc.v
+L0 1
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+vserializer
+R4
+!i10b 1
+!s100 h?Wkb8oUznb[Z?Zc:V7Of2
+I@_B6IJHPJL[h>h@MS0FfD0
+R1
+R5
+R6
+8serializer.v
+Fserializer.v
+L0 1
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+vTx_FSM
+R4
+!i10b 1
+!s100 X^AM;PTS`eHl0MPZSGdPm3
+I42RN;`LZSfbe6D:XNnY4L3
+R1
+R5
+w1660559060
+8Tx_FSM.v
+FTx_FSM.v
+L0 1
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+n@tx_@f@s@m
+vUART_TX
+R4
+!i10b 1
+!s100 cEZUY8zTJ4zl9z9beXT_92
+IoYiW9m7<G9GZV13i<1b8N2
+R1
+R5
+w1660558765
+8UART_TX.v
+FUART_TX.v
+L0 1
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+n@u@a@r@t_@t@x
+vUART_TX_tb
+R4
+!i10b 1
+!s100 z6kCC9G]jl1oO<gVz<Uea3
+I75I7A=C582EFFR0OSO9GF1
+R1
+R5
+R6
+8UART_TX_tb.v
+FUART_TX_tb.v
+L0 2
+R2
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R3
+n@u@a@r@t_@t@x_tb

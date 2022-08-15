@@ -1,0 +1,138 @@
+# vsim work.UART_TX_tb 
+# Start time: 12:24:46 on Aug 15,2022
+# Loading work.UART_TX_tb
+# Loading work.UART_TX
+# Loading work.Tx_FSM
+# Loading work.serializer
+# Loading work.parity_calc
+# Loading work.MUX
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/UART_TX_tb/WIDTH \
+sim:/UART_TX_tb/CLOCK_PERIOD \
+sim:/UART_TX_tb/P_DATA_tb \
+sim:/UART_TX_tb/DATA_VALID_tb \
+sim:/UART_TX_tb/PAR_EN_tb \
+sim:/UART_TX_tb/PAR_TYP_tb \
+sim:/UART_TX_tb/CLK_tb \
+sim:/UART_TX_tb/RST_tb \
+sim:/UART_TX_tb/TX_OUT_tb \
+sim:/UART_TX_tb/Busy_tb \
+sim:/UART_TX_tb/OLD_P_DATA_tb
+run -all
+# <<<<<<<<<<<<Testing the frame with NO parity>>>>>>>>>>>>>
+# start bit is working correctly.
+# Checking on bit no.0...
+# Check is success
+# Checking on bit no.1...
+# Check is success
+# Checking on bit no.2...
+# Check is success
+# Checking on bit no.3...
+# Check is success
+# Checking on bit no.4...
+# Check is success
+# Checking on bit no.5...
+# Check is success
+# Checking on bit no.6...
+# Check is success
+# Checking on bit no.7...
+# Check is success
+# stop bit is working correctly.
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<Testing the frame with EVEN parity>>>>>>>>>>>>>
+# start bit is working correctly.
+# Checking on bit no.0...
+# Check is success
+# Checking on bit no.1...
+# Check is success
+# Checking on bit no.2...
+# Check is success
+# Checking on bit no.3...
+# Check is success
+# Checking on bit no.4...
+# Check is success
+# Checking on bit no.5...
+# Check is success
+# Checking on bit no.6...
+# Check is success
+# Checking on bit no.7...
+# Check is success
+# even parity bit is working correctly.
+# stop bit is working correctly.
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<Testing the frame with ODD parity>>>>>>>>>>>>>
+# start bit is working correctly.
+# Checking on bit no.0...
+# Check is success
+# Checking on bit no.1...
+# Check is success
+# Checking on bit no.2...
+# Check is success
+# Checking on bit no.3...
+# Check is success
+# Checking on bit no.4...
+# Check is success
+# Checking on bit no.5...
+# Check is success
+# Checking on bit no.6...
+# Check is success
+# Checking on bit no.7...
+# Check is success
+# odd parity bit is working correctly.
+# stop bit is working correctly.
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<Changing the input data after resetting DATA_VALID>>>>>>>>
+# We check that the output data is the old one
+# Checking on bit no.0...
+# Check is success
+# Checking on bit no.1...
+# Check is success
+# Checking on bit no.2...
+# Check is success
+# Checking on bit no.3...
+# Check is success
+# Checking on bit no.4...
+# Check is success
+# Checking on bit no.5...
+# Check is success
+# Checking on bit no.6...
+# Check is success
+# Checking on bit no.7...
+# Check is success
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# <<<<<<<<Raising the DATA_VALID flag during the stop bit>>>>>>>>
+# We check that the output data is the new data input sampled
+# start bit is working correctly.
+# Checking on bit no.0...
+# Check is success
+# Checking on bit no.1...
+# Check is success
+# Checking on bit no.2...
+# Check is success
+# Checking on bit no.3...
+# Check is success
+# Checking on bit no.4...
+# Check is success
+# Checking on bit no.5...
+# Check is success
+# Checking on bit no.6...
+# Check is success
+# Checking on bit no.7...
+# Check is success
+# stop bit is working correctly.
+# ** Note: $finish    : UART_TX_tb.v(48)
+#    Time: 1212 ns  Iteration: 0  Instance: /UART_TX_tb
+# 1
+# Break in Module UART_TX_tb at UART_TX_tb.v line 48
+# End time: 12:25:40 on Aug 15,2022, Elapsed time: 0:00:54
+# Errors: 1, Warnings: 0
